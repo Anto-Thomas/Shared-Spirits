@@ -1,0 +1,22 @@
+<body>
+    <h2><u>S h a r e d S p i r i t s</u> </h2>
+    <h4><u>Drinks Maintenance</u></h4><br>
+    <form style="width: 80%;" [formGroup]="drinksForm" class="container" (ngSubmit)="addNew()">
+      <br>
+      <label>Drink Name</label>
+      <input type="text" formControlName="dname" size="20" maxlength="21">
+      <label>Enter Price</label>
+      <input type="number" formControlName="dprice" size="5" maxlength="6">
+      <label>Category</label>
+      <input type="text" formControlName="dcat" size="15" maxlength="16">
+      <label>Description</label>
+      <input type="text" formControlName="ddesc" size="30" maxlength="31">
+      <label>Active:</label>
+      <input type="radio" formControlName="actStatus" value="Yes">Y
+      <input type="radio" formControlName="actStatus" value="No">N
+      <button type="submit" [disabled]="!drinksForm.valid"> <span *ngIf="!edit_form"><b>Add New</b></span>
+        <span *ngIf="edit_form"><b>Edit Update</b></span></button><br><br>
+    </form>
+    <br>
+    <app-list-drinks></app-list-drinks>
+  </body>

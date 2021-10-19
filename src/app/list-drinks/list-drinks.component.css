@@ -1,0 +1,30 @@
+.clickable{
+  cursor: pointer;
+}
+body{
+  border:2px solid rgb(0, 7, 14);width:99%;margin-left:auto;margin-right:auto; background-color:rgb(174, 206, 243); color: rgb(1, 53, 1);
+}
+table,form{
+width:95%;margin-left:auto;margin-right:auto; background-color:rgb(212, 226, 245); font-size : 12px;
+}
+H1,H2,H3{
+width:30%;margin-left:auto;margin-right:auto;color: darkblue;;
+}
+H4{
+width:26%;margin-left:auto;margin-right:auto; color: darkblue;;
+}
+th,td{
+border:2px solid rgb(128, 4, 4); border-collapse:collapse;
+}
+th,td,tr {
+width: 35% ; padding:10px;
+}
+.edit{
+  background-color: rgb(76, 0, 255);
+}
+label,button{
+  margin-left: 15px; font-size: 13px;
+}
+button{
+  color: rgba(255, 251, 0, 0.644); background-color: rgb(131, 6, 6);
+}

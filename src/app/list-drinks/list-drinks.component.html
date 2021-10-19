@@ -1,0 +1,44 @@
+<body>
+  <!-- <form style="width:50%">
+    <br>
+    <label>Choose an option-:</label>
+    <select name="menu" [(ngModel)]="menu">
+      <option value="drink_name">Drink Name</option>
+      <option value="drink_price">Drink Price</option>
+    </select>
+    <label *ngIf="menu=='drink_name'"> Enter name of the drink</label>
+    <label *ngIf="menu=='drink_price'"> Enter price of the drink</label>
+    <input type="text" name="s_val" [(ngModel)]="s_val">
+    <button (click)="v_search()" type="button"><b>Search</b></button>
+    <button *ngIf="s_val!=null" (click)="reload()" type="button">Display All</button>
+    <br>
+    <br>
+  </form> -->
+  <br>
+  <h3 *ngIf="drinks.length > 0">List of Drinks Entered</h3>
+  <div class="container">
+    <table *ngIf="drinks.length > 0">
+      <thead>
+        <tr>
+          <th><u>Drink Name</u></th>
+          <th><u>Drink Price</u></th>
+          <th>Category</th>
+          <th>Description</th>
+          <th>Status</th>
+          <th colspan="2">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let drink of drinks">
+          <td>{{ drink.d_name }}</td>
+          <td>{{ drink.d_price }}</td>
+          <td>{{ drink.d_cat }}</td>
+          <td>{{ drink.d_desc }}</td>
+          <td>{{ drink.d_status}}</td>
+          <!-- <td><button (click)="edit(drink)">Edit</button></td>
+          <td><button (click)="del(drink)"> Delete</button></td> -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>

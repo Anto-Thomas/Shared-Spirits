@@ -1,0 +1,9 @@
+<nav class="navbar" style="background-color: antiquewhite;">
+  <a class="navbar-brand"><b>S h a r e d S p i r i t s</b></a>
+    <ul class="nav nav-pills">
+    <li class="nav-item"><a class="nav-link" routerLink="home"><b>Home</b></a></li>
+    <li class="nav-item"><a class="nav-link" routerLink="signup"><b>Signup</b></a></li>
+    <li class="nav-item"><a class="nav-link" routerLink="login" (click)="logfun()"><span *ngIf="!loggedin"><b>Login</b></span>
+      <span *ngIf="loggedin"><b>logout</b></span></a></li>
+  </ul>
+  </nav>
